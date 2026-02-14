@@ -26,7 +26,7 @@ $ git remote add upstream https://github.com/hiroppy/mf-dashboard
   - Private, Familyなど最初から作成されているvaultにMoneyForwardのアカウントを保存している場合、service accountはそのvaultへアクセスできないので注意。その場合は、手で作ったvaultへ移動させる必要がある
 - Cloudflareにプロジェクトを作り、そのリポジトリとGitHub連携を行う ([参考](https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/))
   - ビルド構成
-    - ビルド コマンド: `pnpm run build`
+    - ビルド コマンド: `pnpm build --filter="@mf-dashboard/web"`
     - デプロイ コマンド: `npx wrangler deploy`
     - バージョン コマンド: `npx wrangler versions upload`
     - ルート ディレクトリ: `/`
